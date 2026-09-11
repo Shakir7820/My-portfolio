@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Developer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- =============================================
+  HOW VOICE WORKS:
+  Har <span class="sv"> ke andar data-audio attribute mein
+  aapki khud ki recording ka file name daalo.
+
+  Example:
+  <span class="sv" data-audio="voice.mp4">Hello</span>
+
+  Recording karo → static/audio/ folder mein rakkho
+  → data-audio mein woh naam daalo → done!
+
+  Neeche EVERY sv span mein placeholder hai:
+  data-audio="voice.mp4"
+  Sirf file name badlo apni recording ke hisab se.
+============================================= -->
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <span class="sv" data-audio="voice.mp4">DEV</span>
+  </div>
+  <ul class="nav-list">
+    <li><a href="#hero"     class="sv" data-audio="/static/audio/Home.mp4">Home</a></li>
+    <li><a href="#about"    class="sv" data-audio="/static/audio/Home.mp4">About</a></li>
+    <li><a href="#skills"   class="sv" data-audio="voice.mp4">Skills</a></li>
+    <li><a href="#projects" class="sv" data-audio="voice.mp4">Projects</a></li>
+    <li><a href="#contact"  class="sv" data-audio="voice.mp4">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <p class="hero-tag">
+      <span class="sv" data-audio="voice.mp4">BCA · Third Year Student · Python Full Stack Developer</span>
+    </p>
+    <h1 class="hero-h1">
+      <span class="sv" data-audio="voice.mp4">Building <br> Digital <br> Experiences</span><br/>
+      
+    </h1>
+    <p class="hero-sub">
+      <span class="sv" data-audio="voice.mp4">Python · Flask · JavaScript · MySQL · Web Dev</span>
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-fill sv" data-audio="voice.mp4">View Work</a>
+      <a href="#contact"  class="btn-line sv" data-audio="voice.mp4">Hire Me</a>
+    </div>
+  </div>
+  <div class="hero-cards">
+    <div class="hcard"><i class="fas fa-flask"></i> Flask</div>
+    <div class="hcard"><i class="fab fa-html5"></i> HTML</div>
+    <div class="hcard"><i class="fab fa-css3-alt"></i> CSS</div>
+    <div class="hcard"><i class="fab fa-js"></i> JavaScript</div>
+    <div class="hcard"><i class="fab fa-react"></i> React</div>
+    <div class="hcard"><i class="fab fa-python"></i> Python</div>
+    <div class="hcard"><i class="fas fa-database"></i> MySQL</div>
+     &nbsp; &nbsp; &nbsp;
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <p class="sec-label">
+    <span class="sv" data-audio="voice.mp4">01 — About Me</span>
+  </p>
+  <div class="about-grid">
+    <div class="photo-wrap">
+      <div class="photo-ring">
+        <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile" class="photo-img"/>
+      </div>
+      <div class="photo-badge">BCA<br/>3rd Year</div>
+    </div>
+    <div class="about-body">
+      <h2 class="sec-title">
+        <span class="sv" data-audio="voice.mp4">Who I Am</span>
+      </h2>
+      <p class="about-p">
+        I'm a passionate <strong>BCA Third Year student</strong> who builds
+        fast, clean web apps. I work with Python, Flask, HTML, CSS, JavaScript,
+        and MySQL to turn ideas into real products.
+      </p>
+      <p class="about-p">
+        Right now I'm deep into <strong>Django</strong>. Next stop:
+        <strong>Generative AI</strong>, <strong>Docker</strong>, and <strong>AWS</strong>.
+        I don't just learn — I build.
+      </p>
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-n sv" data-audio="voice.mp4">5+</span>
+          <span class="stat-l">Technologies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n sv" data-audio="voice.mp4">10+</span>
+          <span class="stat-l">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n sv" data-audio="voice.mp4">3rd</span>
+          <span class="stat-l">Year BCA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <p class="sec-label">
+    <span class="sv" data-audio="voice.mp4">02 — Skills</span>
+  </p>
+  <h2 class="sec-title">
+    <span class="sv" data-audio="voice.mp4">My Arsenal</span>
+  </h2>
+  <div class="skills-grid">
+
+    <!-- Proficient -->
+    <div class="skill-col">
+      <p class="col-label">Proficient</p>
+
+      <div class="skill-row">
+        <div class="sk-icon"><i class="fab fa-html5"></i></div>
+        <div class="sk-info">
+          <span class="sv" data-audio="voice.mp4">HTML5</span>
+          <div class="bar"><div class="bar-fill" style="--w:90%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="sk-icon"><i class="fab fa-css3-alt"></i></div>
+        <div class="sk-info">
+          <span class="sv" data-audio="voice.mp4">CSS3</span>
+          <div class="bar"><div class="bar-fill" style="--w:85%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="sk-icon"><i class="fab fa-js"></i></div>
+        <div class="sk-info">
+          <span class="sv" data-audio="voice.mp4">JavaScript</span>
+          <div class="bar"><div class="bar-fill" style="--w:80%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="sk-icon"><i class="fab fa-python"></i></div>
+        <div class="sk-info">
+          <span class="sv" data-audio="voice.mp4">Python</span>
+          <div class="bar"><div class="bar-fill" style="--w:82%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="sk-icon"><i class="fas fa-flask"></i></div>
+        <div class="sk-info">
+          <span class="sv" data-audio="voice.mp4">Flask</span>
+          <div class="bar"><div class="bar-fill" style="--w:78%"></div></div>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="sk-icon"><i class="fas fa-database"></i></div>
+        <div class="sk-info">
+          <span class="sv" data-audio="voice.mp4">MySQL</span>
+          <div class="bar"><div class="bar-fill" style="--w:75%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learning / Goals -->
+    <div class="skill-col">
+      <p class="col-label">Currently Learning</p>
+      <div class="badge-card">
+        <div class="sk-icon pulse-icon"><i class="fas fa-layer-group"></i></div>
+        <span class="sv" data-audio="voice.mp4">Django</span>
+        <span class="chip chip-cyan">Learning</span>
+      </div>
+
+      <p class="col-label" style="margin-top:2rem">Goals</p>
+      <div class="badge-card">
+        <div class="sk-icon"><i class="fas fa-robot"></i></div>
+        <span class="sv" data-audio="voice.mp4">Generative AI</span>
+        <span class="chip chip-purple">Next</span>
+      </div>
+      <div class="badge-card">
+        <div class="sk-icon"><i class="fab fa-docker"></i></div>
+        <span class="sv" data-audio="voice.mp4">Docker</span>
+        <span class="chip chip-purple">Next</span>
+      </div>
+      <div class="badge-card">
+        <div class="sk-icon"><i class="fab fa-aws"></i></div>
+        <span class="sv" data-audio="voice.mp4">AWS</span>
+        <span class="chip chip-purple">Next</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <p class="sec-label">
+    <span class="sv" data-audio="voice.mp4">03 — Projects</span>
+  </p>
+  <h2 class="sec-title">
+    <span class="sv" data-audio="voice.mp4">What I've Built</span>
+  </h2>
+  <div class="proj-grid">
+
+    <div class="proj-card">
+      <span class="proj-num">01</span>
+      <div class="proj-icon"><i class="fas fa-shopping-cart"></i></div>
+      <h3 class="sv" data-audio="voice.mp4">E-Commerce App</h3>
+      <p>Full-stack shopping platform with Flask backend, MySQL database, user auth, and dynamic product listings.</p>
+      <div class="proj-tags">
+        <span>Flask</span><span>MySQL</span><span>HTML/CSS</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">02</span>
+      <div class="proj-icon"><i class="fas fa-tasks"></i></div>
+      <h3 class="sv" data-audio="voice.mp4">Task Manager</h3>
+      <p>CRUD task management with user sessions, deadline tracking, and clean responsive UI.</p>
+      <div class="proj-tags">
+        <span>Python</span><span>Flask</span><span>JS</span>
+      </div>
+    </div>
+
+    <div class="proj-card">
+      <span class="proj-num">03</span>
+      <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3 class="sv" data-audio="voice.mp4">Student Portal</h3>
+      <p>Student management portal with attendance, marks, and timetable modules backed by MySQL.</p>
+      <div class="proj-tags">
+        <span>MySQL</span><span>Flask</span><span>CSS3</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <p class="sec-label">
+    <span class="sv" data-audio="voice.mp4">04 — Contact</span>
+  </p>
+  <h2 class="sec-title">
+    <span class="sv" data-audio="voice.mp4">Let's Connect</span>
+  </h2>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <p>Open to internships, collaborations, and cool projects. Drop a message!</p>
+      <div class="contact-links">
+        <a href="#" class="clink sv" data-audio="voice.mp4">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="#" class="clink sv" data-audio="voice.mp4">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:you@email.com" class="clink sv" data-audio="voice.mp4">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Form submits to Flask /api/contact -->
+    <form class="cform" id="cform">
+      <div class="fg">
+        <input type="text"  id="name"    name="name"    placeholder="Your Name"    required/>
+        <label for="name">Name</label>
+      </div>
+      <div class="fg">
+        <input type="email" id="email"   name="email"   placeholder="Your Email"   required/>
+        <label for="email">Email</label>
+      </div>
+      <div class="fg">
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        <label for="message">Message</label>
+      </div>
+      <button type="submit" class="btn-fill sv" data-audio="voice.mp4">Send Message</button>
+      <p class="form-msg" id="fmsg"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  Built with <span class="grad-text">Flask + MySQL + HTML/CSS/JS</span> · Designed by Me
+</footer>
+
+<!-- =============================================
+  VOICE ENGINE — minimal JS
+  Sirf yeh kaam karta hai:
+  1. Har .sv element pe mouseenter → us ka data-audio play karo
+  2. Mouse chale gaya → audio band karo
+============================================= -->
+<script>
+(function () {
+  // Cache: ek hi file baar baar load na ho
+  var cache = {};
+
+  function getAudio(file) {
+    if (!cache[file]) {
+      // Agar full path hai (/static/...) toh seedha use karo
+      // Agar sirf file name hai (voice.mp4) toh /static/audio/ add karo
+      var url = file.startsWith('/') ? file : '/static/audio/' + file;
+      var a = new Audio(url);
+      a.preload = 'auto';
+      cache[file] = a;
+    }
+    return cache[file];
+  }
+
+  document.querySelectorAll('.sv').forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      var file = el.dataset.audio;
+      if (!file) return;
+      var a = getAudio(file);
+      a.currentTime = 0;
+      a.volume = 0.75;
+      a.play().catch(function(){});
+      el.classList.add('sv-active');
+    });
+    el.addEventListener('mouseleave', function () {
+      var file = el.dataset.audio;
+      if (!file) return;
+      var a = getAudio(file);
+      a.pause();
+      a.currentTime = 0;
+      el.classList.remove('sv-active');
+    });
+  });
+
+  // Contact form
+  var form = document.getElementById('cform');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = document.getElementById('fmsg');
+      var btn = form.querySelector('button[type=submit]');
+      btn.textContent = 'Sending...';
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:    document.getElementById('name').value,
+          email:   document.getElementById('email').value,
+          message: document.getElementById('message').value
+        })
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        msg.textContent = d.message || d.error;
+        msg.className = 'form-msg ' + (d.success ? 'ok' : 'err');
+        if (d.success) form.reset();
+      })
+      .catch(function(){
+        msg.textContent = 'Something went wrong.';
+        msg.className = 'form-msg err';
+      })
+      .finally(function(){ btn.textContent = 'Send Message'; });
+    });
+  }
+
+  // Navbar scroll shrink
+  window.addEventListener('scroll', function () {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Skill bars animate when visible
+  var bars = document.querySelectorAll('.bar-fill');
+  var barObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.style.getPropertyValue('--w') || getComputedStyle(e.target).getPropertyValue('--w');
+        e.target.classList.add('animated');
+        barObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(function(b){ barObs.observe(b); });
+})();
+</script>
+
+</body>
+</html>
