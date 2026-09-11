@@ -28,16 +28,23 @@
 
 <!-- NAVBAR -->
 <nav class="nav" id="nav">
-  <div class="nav-logo">
-    <span class="sv" data-audio="voice.mp4">DEV</span>
-  </div>
-  <ul class="nav-list">
-    <li><a href="#hero"     class="sv" data-audio="/static/audio/Home.mp4">Home</a></li>
-    <li><a href="#about"    class="sv" data-audio="/static/audio/Home.mp4">About</a></li>
-    <li><a href="#skills"   class="sv" data-audio="voice.mp4">Skills</a></li>
-    <li><a href="#projects" class="sv" data-audio="voice.mp4">Projects</a></li>
-    <li><a href="#contact"  class="sv" data-audio="voice.mp4">Contact</a></li>
-  </ul>
+
+    <div class="nav-logo">
+        <span class="sv" data-audio="voice.mp4">DEV</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-list">
+        <li><a href="#hero" class="sv" data-audio="/static/audio/Home.mp4">Home</a></li>
+        <li><a href="#about" class="sv" data-audio="/static/audio/Home.mp4">About</a></li>
+        <li><a href="#skills" class="sv" data-audio="voice.mp4">Skills</a></li>
+        <li><a href="#projects" class="sv" data-audio="voice.mp4">Projects</a></li>
+        <li><a href="#contact" class="sv" data-audio="voice.mp4">Contact</a></li>
+    </ul>
+
 </nav>
 
 <!-- HERO -->
@@ -409,6 +416,37 @@
   }, { threshold: 0.3 });
   bars.forEach(function(b){ barObs.observe(b); });
 })();
+
+// Mobile hamburger menu
+var menuToggle = document.getElementById('menuToggle');
+var navList = document.querySelector('.nav-list');
+
+if (menuToggle && navList) {
+
+    menuToggle.addEventListener('click', function () {
+
+        navList.classList.toggle('active');
+
+        if (navList.classList.contains('active')) {
+            menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+
+    });
+
+    // Menu item click ke baad menu close
+    navList.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function() {
+
+            navList.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+
+        });
+
+    });
+}
 </script>
 
 </body>
