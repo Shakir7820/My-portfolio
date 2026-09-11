@@ -317,7 +317,10 @@ section { padding: 6rem 5%; }
 /* =============================================
    ABOUT
 ============================================= */
-.about { background: var(--bg2); }
+.about { 
+  background: var(--bg2);
+  height: 800px;
+ }
 
 .about-grid {
   display: grid;
